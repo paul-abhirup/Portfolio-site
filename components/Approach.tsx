@@ -143,6 +143,7 @@ const Card = ({
     </div>
   );
 };
+
 // add order prop for the Phase number change
 const AceternityIcon = ({ order }: { order: string }) => {
   return (
