@@ -61,7 +61,7 @@ const Hero = () => {
           </p>
 
           {/* Todo -- add some kind of other button like the one that change to plane and mail*/}
-          <a href="#about">
+          <a href="mailto:abhiruppaul1249@gmail.com">
             <MagicButton
               title="Connect "
               icon={<FaLocationArrow />}
