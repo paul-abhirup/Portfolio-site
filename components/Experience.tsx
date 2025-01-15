@@ -2,16 +2,40 @@ import React from "react";
 
 import { workExperience } from "@/data";
 import { Button } from "./ui/MovingBorders";
+import { Timeline } from "./ui/timeline";
 
 const Experience = () => {
-  return (
-    <div className="py-20 w-full">
-      <h1 className="heading">
-        My <span className="text-purple">work experience</span>
-      </h1>
+  const timelineData = workExperience.map((card) => ({
 
-      {/* this is the workexperience card */}
-      {/* todo --- add parralax part to this */}
+    title: card.title,
+    content: (
+      <div className="flex flex-col md:flex-row items-start gap-4">
+        <img
+          src={card.thumbnail}
+      <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
+        {timelineData.map((data, index) => (
+          <Timeline key={index} title={data.title} content={data.content} />
+        ))}
+      </div>
+            title: card.id,
+            content: (
+            <div className="flex flex-col md:flex-row items-start gap-4">
+             <img
+            src={card.thumbnail}
+            alt={card.title || "Work experience thumbnail"}
+            className="lg:w-32 md:w-20 w-16"
+            />
+          <p className="text-neutral-700 dark:text-neutral-300">{card.desc}</p>
+       </div>
+       ),
+        }))}
+      </div>
+
+  );
+};
+
+export default Experience;
+
 
       {/* <div className="w-full mt-12 grid lg:grid-cols-4 grid-cols-1 gap-10">
         {workExperience.map((card) => (
@@ -48,10 +72,5 @@ const Experience = () => {
               </div>
             </div>
           </Button>
-        ))}
-      </div> */}
-    </div>
-  );
-};
-
-export default Experience;
+          ))}
+          </div> */}
