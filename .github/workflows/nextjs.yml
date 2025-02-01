@@ -38,4 +38,3 @@ jobs:
         with:
           personal_token: ${{ secrets.GH_PAT }} # Use your PAT instead of GITHUB_TOKEN
           publish_dir: ./out
-          publish_branch: gh-pages
