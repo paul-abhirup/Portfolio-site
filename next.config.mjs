@@ -3,7 +3,7 @@ import { withSentryConfig } from "@sentry/nextjs";
 const nextConfig = {
   output: "export",
   basePath: process.env.NODE_ENV === "production" ? "/Portfolio-site" : "", // Replace "your-repo-name" with your GitHub repo name
-  assetPrefix: process.env.NODE_ENV === "production" ? "/Portfolio-site" : "", // Replace "your-repo-name" with your GitHub repo name
+  assetPrefix: process.env.NODE_ENV === "production" ? "/Portfolio-site/" : "", // Replace "your-repo-name" with your GitHub repo name
   images: {
     unoptimized: true, // Disable image optimization for static export
   },
