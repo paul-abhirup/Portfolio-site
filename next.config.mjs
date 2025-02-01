@@ -8,7 +8,7 @@ const nextConfig = {
     unoptimized: true, // Disable image optimization for static export
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: true, // disable type errors
   },
 };
 
