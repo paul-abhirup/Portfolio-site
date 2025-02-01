@@ -1,7 +1,12 @@
-import {withSentryConfig} from '@sentry/nextjs';
+import { withSentryConfig } from "@sentry/nextjs";
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // output: "export",
+  output: "export",
+  basePath: process.env.NODE_ENV === "production" ? "/Portfolio-site" : "", // Replace "your-repo-name" with your GitHub repo name
+  assetPrefix: process.env.NODE_ENV === "production" ? "/Portfolio-site" : "", // Replace "your-repo-name" with your GitHub repo name
+  images: {
+    unoptimized: true, // Disable image optimization for static export
+  },
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -45,4 +50,3 @@ const nextConfig = {
 // });
 
 export default nextConfig;
-
