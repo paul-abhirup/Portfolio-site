@@ -1,2 +1,5 @@
 node_modules
 node_modules
+
+# Ignore Next.js cache
+.next/cache
