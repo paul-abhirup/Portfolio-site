@@ -4,3 +4,4 @@ node_modules
 # Ignore Next.js cache
 .next/cache
 
+.env
